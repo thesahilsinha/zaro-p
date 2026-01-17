@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - ZARO Bakerhouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kensington:wght@400;700&family=Begum:wght@300;400;600&family=Exode+Variable:wght@300;400&family=Goldplay:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F8F4ED;
+            --orange: #EA6D3A;
+            --teal: #3E594E;
+            --dark-teal: #203329;
+            --yellow: #F6DA9D;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --cream: #1a1a1a;
+            --text-dark: #ffffff;
+            --bg-secondary: #252525;
+            --yellow: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Exode Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        [data-theme="dark"] body {
+            background: #1a1a1a;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--cream);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo h1 {
+            font-family: 'Goldplay', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--text-dark);
+        }
+
+        .logo span {
+            font-family: 'Goldplay', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            display: block;
+            margin-top: -0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 2px solid var(--text-dark);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: white;
+        }
+
+        .policy-container {
+            max-width: 900px;
+            margin: 120px auto 80px;
+            padding: 0 2rem;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--orange);
+        }
+
+        .policy-header h1 {
+            font-family: 'Kensington', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            font-family: 'Begum', sans-serif;
+            font-size: 1rem;
+            color: var(--teal);
+            font-weight: 400;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            font-family: 'Kensington', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--teal);
+        }
+
+        .policy-section h3 {
+            font-family: 'Begum', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .policy-section p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .policy-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--yellow);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--orange);
+        }
+
+        [data-theme="dark"] .highlight-box {
+            background: var(--bg-secondary);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .contact-box {
+            background: var(--yellow);
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border-left: 4px solid var(--orange);
+        }
+
+        [data-theme="dark"] .contact-box {
+            background: var(--bg-secondary);
+        }
+
+        .contact-box h2 {
+            font-family: 'Kensington', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--teal);
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-box strong {
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .footer {
+            background: var(--dark-teal);
+            color: var(--text-light);
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .policy-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .policy-container {
+                margin: 100px auto 60px;
+            }
+
+            .contact-box, .highlight-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <h1>ZARO</h1>
+                    <span>BAKEHOUSE</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#products">Products</a>
+                    <a href="index.html#contact">Contact</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="icon">◐</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Terms & Conditions Content -->
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>Terms & Conditions</h1>
+            <p class="last-updated">Last Updated: January 17, 2026</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to ZARO Bakerhouse. These Terms and Conditions govern your use of our website and the purchase of products and services offered by ZARO Bakerhouse.</p>
+            <p>By accessing our website, browsing our products, or placing an order, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website or services.</p>
+            <p>We reserve the right to update or modify these Terms and Conditions at any time without prior notice. Your continued use of the website following any changes constitutes acceptance of the revised terms.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>2. Business Information</h2>
+            <p><strong>Business Name:</strong> ZARO Bakerhouse</p>
+            <p><strong>Nature of Business:</strong> ZARO Bakerhouse is engaged in the production, sale, and delivery of bakery products and food items, including but not limited to breads, cakes, pastries, cookies, and other baked goods.</p>
+            <p><strong>Business Address:</strong> Shop No 10, Shiv Darshan, Plot No 407 15, 33rd Rd, near Noble Medical, Bandra West, Mumbai, Maharashtra 400050</p>
+            <p><strong>Contact Information:</strong></p>
+            <ul>
+                <li>Email: hello@zarobakery.com</li>
+                <li>Phone: +91 877 964 9761</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>3. Use of Website</h2>
+            <p>By using the ZARO Bakerhouse website, you agree to the following:</p>
+            <ul>
+                <li>You will use the website for lawful purposes only and in compliance with all applicable laws and regulations</li>
+                <li>You will not engage in any fraudulent, abusive, or harmful activities</li>
+                <li>You will not attempt to gain unauthorized access to any portion of the website, servers, or systems</li>
+                <li>You will not use the website to transmit malicious code, viruses, or any harmful software</li>
+                <li>You will not misuse or exploit the website for any commercial purposes other than placing legitimate orders</li>
+                <li>You will provide accurate and truthful information when placing orders or communicating with us</li>
+            </ul>
+            <p>ZARO Bakerhouse reserves the right to suspend or terminate access to the website for any user who violates these terms or engages in prohibited activities.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>4. Orders and Payments</h2>
+            
+            <h3>Order Placement</h3>
+            <p>When you place an order through the ZARO Bakerhouse website, you are making an offer to purchase the selected products. All orders are subject to acceptance and availability. We reserve the right to accept or decline any order at our sole discretion.</p>
+
+            <h3>Pricing</h3>
+            <p>All prices displayed on the website are in Indian Rupees (INR) and include applicable taxes unless otherwise stated. Prices are subject to change without prior notice. The price applicable at the time of order confirmation will be charged.</p>
+
+            <h3>Payment Processing</h3>
+            <p>Payments for orders placed on the ZARO Bakerhouse website are processed through secure third-party payment gateways, including but not limited to Razorpay and other RBI-approved payment service providers.</p>
+            <ul>
+                <li>ZARO Bakerhouse does not store or have access to your complete credit card, debit card, UPI, or bank account details</li>
+                <li>Payment information is encrypted and transmitted directly to our payment gateway partners</li>
+                <li>All payment transactions are subject to verification and authorization by the payment gateway and issuing bank</li>
+                <li>In case of payment failure or declined transactions, your order will not be processed</li>
+            </ul>
+
+            <h3>Product Availability</h3>
+            <p>Product availability is subject to stock and operational capacity. In the event that an ordered item is unavailable, we will notify you and offer alternatives or issue a refund as per our Refund Policy.</p>
+
+            <div class="highlight-box">
+                <p><strong>Important:</strong> By placing an order, you confirm that all information provided is accurate and that you are authorized to use the payment method selected.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>5. Product Information</h2>
+            <p>We make every effort to ensure that product descriptions, images, and information on our website are accurate and up to date. However, please note:</p>
+            <ul>
+                <li>Product images are for representation purposes only and actual products may vary slightly in appearance, color, size, or decoration</li>
+                <li>Variations may occur due to customization requests, seasonal ingredient availability, or artisan craftsmanship</li>
+                <li>We reserve the right to modify product specifications, ingredients, or recipes without prior notice</li>
+                <li>In the case of custom cakes or personalized items, the final product will be prepared according to your specifications to the best of our ability</li>
+            </ul>
+            <p>If you have specific dietary requirements, allergies, or customization requests, please communicate them clearly at the time of ordering. ZARO Bakerhouse is not liable for adverse reactions resulting from undisclosed allergies or dietary restrictions.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>6. Cancellations and Refunds</h2>
+            <p>All cancellations and refunds are governed by our Refund and Cancellation Policy. Please review the policy in detail before placing an order.</p>
+            <p>Key points include:</p>
+            <ul>
+                <li>Orders may be cancelled within a limited time window before preparation begins</li>
+                <li>Refunds are applicable only in cases of incorrect items, damaged products, or verified quality issues</li>
+                <li>Customized and baked-to-order items are non-refundable except in cases of quality or delivery issues</li>
+                <li>Change-of-mind refunds are not applicable for perishable food items</li>
+            </ul>
+            <p>For complete details, please refer to our <a href="refund.html" style="color: var(--orange); text-decoration: underline;">Refund & Cancellation Policy</a>.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>7. Delivery</h2>
+            <p>ZARO Bakerhouse offers delivery services for orders placed through our website. The following terms apply:</p>
+            
+            <h3>Delivery Timelines</h3>
+            <ul>
+                <li>Delivery timelines provided at the time of order placement are estimates and may vary based on location, order volume, traffic conditions, or unforeseen circumstances</li>
+                <li>We strive to deliver all orders on time, but we cannot guarantee exact delivery times</li>
+                <li>Custom orders and special items may require additional preparation time</li>
+            </ul>
+
+            <h3>Delivery Areas</h3>
+            <p>Delivery is available to select areas within our operational zone. Delivery charges, if applicable, will be displayed at checkout based on your location.</p>
+
+            <h3>Delivery Responsibilities</h3>
+            <ul>
+                <li>It is the customer's responsibility to provide accurate delivery address and contact information</li>
+                <li>ZARO Bakerhouse is not responsible for delays or non-delivery due to incorrect address or customer unavailability</li>
+                <li>If the customer is unavailable at the time of delivery, the order may be left at the specified location at the customer's risk</li>
+                <li>In case of non-delivery due to customer unavailability, no refund will be issued</li>
+            </ul>
+
+            <h3>Force Majeure</h3>
+            <p>ZARO Bakerhouse shall not be held liable for delays or failure to deliver due to circumstances beyond our reasonable control, including but not limited to natural disasters, severe weather, strikes, riots, pandemics, or government restrictions.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>8. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, ZARO Bakerhouse, its owners, employees, and agents shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, consequential, or punitive damages arising from the use of our website or services</li>
+                <li>Loss of profits, revenue, data, or business opportunities</li>
+                <li>Damages resulting from errors, omissions, interruptions, or delays in website operation</li>
+                <li>Damages arising from reliance on information provided on the website</li>
+                <li>Any third-party claims or actions related to your use of the website</li>
+            </ul>
+            <p>Our total liability for any claim arising from your use of our website or services shall not exceed the amount paid for the specific order in question.</p>
+            <p>This limitation of liability applies regardless of the form of action, whether in contract, tort, negligence, or otherwise.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>9. Intellectual Property</h2>
+            <p>All content on the ZARO Bakerhouse website, including but not limited to text, images, graphics, logos, product descriptions, design elements, and trademarks, is the exclusive property of ZARO Bakerhouse or its licensors and is protected by intellectual property laws.</p>
+            <p>You agree to the following:</p>
+            <ul>
+                <li>You may not copy, reproduce, distribute, modify, or create derivative works from any content on the website without our prior written consent</li>
+                <li>You may not use our logos, trademarks, or branding materials for any commercial or promotional purposes</li>
+                <li>Any unauthorized use of our intellectual property may result in legal action</li>
+            </ul>
+            <p>If you wish to use any content from our website for legitimate purposes, please contact us for permission at hello@zarobakery.com.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>10. Third-Party Services</h2>
+            <p>The ZARO Bakerhouse website may utilize third-party services for various purposes, including but not limited to:</p>
+            <ul>
+                <li><strong>Payment Gateways:</strong> Razorpay and other secure payment processors</li>
+                <li><strong>Delivery Partners:</strong> Third-party logistics and courier services</li>
+                <li><strong>Analytics and Tracking:</strong> Website analytics and user behavior tracking tools</li>
+            </ul>
+            <p>Please note:</p>
+            <ul>
+                <li>ZARO Bakerhouse is not responsible for the policies, practices, or performance of third-party service providers</li>
+                <li>Your use of third-party services is subject to their respective terms and conditions and privacy policies</li>
+                <li>We do not endorse or guarantee the reliability, accuracy, or quality of third-party services</li>
+                <li>Any disputes or issues with third-party services must be resolved directly with the respective provider</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>11. User Accounts</h2>
+            <p>If you create an account on our website, you are responsible for:</p>
+            <ul>
+                <li>Maintaining the confidentiality of your account credentials</li>
+                <li>All activities that occur under your account</li>
+                <li>Notifying us immediately of any unauthorized use or security breach</li>
+            </ul>
+            <p>ZARO Bakerhouse reserves the right to suspend or terminate accounts that violate these Terms and Conditions or engage in fraudulent activities.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>12. Governing Law and Jurisdiction</h2>
+            <p>These Terms and Conditions are governed by and construed in accordance with the laws of India. Any disputes arising from or related to the use of the ZARO Bakerhouse website or services shall be subject to the exclusive jurisdiction of the courts located in Mumbai, Maharashtra, India.</p>
+            <p>By using our website and services, you consent to the jurisdiction and venue of these courts and waive any objection to such jurisdiction or venue.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>13. Severability</h2>
+            <p>If any provision of these Terms and Conditions is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect. The invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>14. Changes to Terms</h2>
+            <p>ZARO Bakerhouse reserves the right to modify, update, or replace these Terms and Conditions at any time without prior notice. Changes will be effective immediately upon posting on this page with an updated "Last Updated" date.</p>
+            <p>It is your responsibility to review these Terms and Conditions periodically. Your continued use of the website and services after any modifications constitutes acceptance of the updated terms.</p>
+        </div>
+
+        <div class="contact-box">
+            <h2>15. Contact Information</h2>
+            <p>If you have any questions, concerns, or feedback regarding these Terms and Conditions, please contact us:</p>
+            <p><strong>Business Name:</strong> ZARO Bakerhouse</p>
+            <p><strong>Address:</strong> Shop No 10, Shiv Darshan, Plot No 407 15, 33rd Rd, near Noble Medical, Bandra West, Mumbai, Maharashtra 400050</p>
+            <p><strong>Email:</strong> hello@zarobakery.com</p>
+            <p><strong>Phone:</strong> +91 877 964 9761</p>
+            <p style="margin-top: 1.5rem;"><strong>Customer Support Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM</p>
+            <p style="margin-top: 1rem;">We are committed to addressing your inquiries and ensuring a positive experience with ZARO Bakerhouse.</p>
+        </div>
+
+        <div class="policy-section">
+            <div class="highlight-box">
+                <p><strong>Acknowledgment:</strong> By using the ZARO Bakerhouse website and placing orders, you acknowledge that you have read, understood, and agreed to these Terms and Conditions in their entirety.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 ZARO Bakerhouse. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>

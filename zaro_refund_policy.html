@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund & Cancellation Policy - ZARO Bakerhouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kensington:wght@400;700&family=Begum:wght@300;400;600&family=Exode+Variable:wght@300;400&family=Goldplay:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F8F4ED;
+            --orange: #EA6D3A;
+            --teal: #3E594E;
+            --dark-teal: #203329;
+            --yellow: #F6DA9D;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --cream: #1a1a1a;
+            --text-dark: #ffffff;
+            --bg-secondary: #252525;
+            --yellow: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Exode Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        [data-theme="dark"] body {
+            background: #1a1a1a;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--cream);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo h1 {
+            font-family: 'Goldplay', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--text-dark);
+        }
+
+        .logo span {
+            font-family: 'Goldplay', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            display: block;
+            margin-top: -0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 2px solid var(--text-dark);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: white;
+        }
+
+        .policy-container {
+            max-width: 900px;
+            margin: 120px auto 80px;
+            padding: 0 2rem;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--orange);
+        }
+
+        .policy-header h1 {
+            font-family: 'Kensington', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            font-family: 'Begum', sans-serif;
+            font-size: 1rem;
+            color: var(--teal);
+            font-weight: 400;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            font-family: 'Kensington', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--teal);
+        }
+
+        .policy-section h3 {
+            font-family: 'Begum', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .policy-section p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .policy-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--yellow);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--orange);
+        }
+
+        [data-theme="dark"] .highlight-box {
+            background: var(--bg-secondary);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .contact-box {
+            background: var(--yellow);
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border-left: 4px solid var(--orange);
+        }
+
+        [data-theme="dark"] .contact-box {
+            background: var(--bg-secondary);
+        }
+
+        .contact-box h2 {
+            font-family: 'Kensington', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--teal);
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-box strong {
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .footer {
+            background: var(--dark-teal);
+            color: var(--text-light);
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .policy-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .policy-container {
+                margin: 100px auto 60px;
+            }
+
+            .contact-box, .highlight-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <h1>ZARO</h1>
+                    <span>BAKEHOUSE</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#products">Products</a>
+                    <a href="index.html#contact">Contact</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="icon">◐</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Refund & Cancellation Policy Content -->
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>Refund & Cancellation Policy</h1>
+            <p class="last-updated">Last Updated: January 17, 2026</p>
+        </div>
+
+        <div class="policy-section">
+            <p>At ZARO Bakerhouse, we are committed to delivering fresh, high-quality baked goods to our customers. Due to the perishable nature of our products and the care involved in preparing each order, we have established the following Refund and Cancellation Policy.</p>
+            <p>Please read this policy carefully before placing an order. By placing an order with ZARO Bakerhouse, you acknowledge and agree to the terms outlined below.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>1. Order Cancellation</h2>
+            
+            <h3>Cancellation Window</h3>
+            <p>Orders may be cancelled only within a limited time frame after order placement and before preparation begins. The cancellation window varies depending on the type of product ordered:</p>
+            <ul>
+                <li><strong>Standard Bakery Items:</strong> Cancellation is permitted within 30 minutes of order placement</li>
+                <li><strong>Custom Cakes and Special Orders:</strong> Cancellation must be requested at least 24 hours before the scheduled delivery or pickup time</li>
+            </ul>
+
+            <h3>After Preparation Begins</h3>
+            <p>Once your order has entered the preparation stage, cancellation is not possible. This is due to the following reasons:</p>
+            <ul>
+                <li>Ingredients have been allocated and preparation has commenced</li>
+                <li>Bakery products are freshly prepared specifically for your order</li>
+                <li>Perishable items cannot be restocked or resold</li>
+            </ul>
+
+            <h3>How to Cancel</h3>
+            <p>To request a cancellation within the permitted window, please contact us immediately at:</p>
+            <ul>
+                <li>Phone: +91 877 964 9761</li>
+                <li>Email: hello@zarobakery.com</li>
+            </ul>
+            <p>Cancellation requests are subject to verification and approval by ZARO Bakerhouse.</p>
+
+            <div class="highlight-box">
+                <p><strong>Important:</strong> Cancellation requests submitted after the preparation has started will not be accepted. If you fail to collect or receive your order, no refund will be issued.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>2. Refund Eligibility</h2>
+            <p>Refunds are applicable only in the following circumstances:</p>
+            
+            <h3>Eligible Refund Cases</h3>
+            <ul>
+                <li><strong>Incorrect Items Delivered:</strong> If you receive products that do not match your order</li>
+                <li><strong>Damaged or Spoiled Products:</strong> If products are received in a damaged, stale, or unsatisfactory condition</li>
+                <li><strong>Missing Items:</strong> If items from your order are missing upon delivery</li>
+                <li><strong>Quality Issues:</strong> If the product does not meet our standard quality criteria, as verified by ZARO Bakerhouse</li>
+                <li><strong>Non-Delivery:</strong> If your order was not delivered despite confirmation</li>
+            </ul>
+
+            <h3>Non-Eligible Refund Cases</h3>
+            <p>Refunds will <strong>not</strong> be provided in the following situations:</p>
+            <ul>
+                <li>Change of mind or preference after order placement</li>
+                <li>Incorrect delivery address provided by the customer</li>
+                <li>Customer unavailability at the time of delivery</li>
+                <li>Rejection of order without valid reason at the time of delivery</li>
+                <li>Minor variations in appearance or decoration that do not affect quality or taste</li>
+                <li>Allergic reactions or dietary concerns not communicated at the time of ordering</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Please Note:</strong> Due to the perishable nature of food items, change-of-mind refunds are not applicable for any bakery products ordered from ZARO Bakerhouse.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>3. Refund Process</h2>
+            
+            <h3>How to Request a Refund</h3>
+            <p>If you believe you are eligible for a refund based on the criteria above, please follow these steps:</p>
+            <ul>
+                <li>Contact ZARO Bakerhouse within 24 hours of receiving your order</li>
+                <li>Provide your order number, contact details, and photographic evidence (if applicable) of the issue</li>
+                <li>Explain the reason for your refund request clearly</li>
+            </ul>
+
+            <h3>Verification and Approval</h3>
+            <p>All refund requests are subject to verification by ZARO Bakerhouse. We may request additional information or photographic evidence to assess the claim. Refund approval is at the sole discretion of ZARO Bakerhouse based on the validity of the complaint.</p>
+
+            <h3>Refund Processing Timeline</h3>
+            <p>Once your refund request is approved:</p>
+            <ul>
+                <li>The refund will be processed to the original payment method used at the time of purchase</li>
+                <li>Processing time is typically <strong>5 to 7 business days</strong> from the date of approval</li>
+                <li>The actual credit to your account may take additional time depending on your bank or payment gateway provider</li>
+                <li>For payments made via UPI, wallets, or net banking, refunds may reflect within 3 to 5 business days</li>
+                <li>For credit/debit card payments, refunds may take 7 to 10 business days depending on your card issuer</li>
+            </ul>
+
+            <h3>Refund Notification</h3>
+            <p>You will receive a confirmation email or SMS once the refund has been initiated. Please retain this confirmation for your records.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>4. Non-Refundable Items</h2>
+            <p>The following items are <strong>non-refundable</strong> under all circumstances, except in cases of verified quality or delivery issues confirmed by ZARO Bakerhouse:</p>
+            <ul>
+                <li><strong>Customized Cakes:</strong> Cakes with personalized designs, messages, or decorations prepared as per customer specifications</li>
+                <li><strong>Baked-to-Order Items:</strong> Specialty items prepared specifically for your order, including themed cakes, corporate orders, and event-specific products</li>
+                <li><strong>Perishable Goods:</strong> All fresh bakery items including breads, pastries, cookies, and confections</li>
+                <li><strong>Pre-ordered Items:</strong> Items ordered in advance for special occasions, events, or celebrations</li>
+                <li><strong>Gift Hampers and Combo Packs:</strong> Unless there is a proven defect or quality issue</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Exception:</strong> If any of the above items are delivered in damaged condition, with incorrect specifications, or do not meet quality standards as verified by ZARO Bakerhouse, a refund or replacement may be issued at our discretion.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>5. Late or Missing Refunds</h2>
+            
+            <h3>If You Haven't Received Your Refund</h3>
+            <p>If your refund has been approved but you have not received it within the stated processing period, please take the following steps:</p>
+            <ul>
+                <li><strong>Check Your Bank Account:</strong> Verify your bank statement or payment gateway transaction history</li>
+                <li><strong>Contact Your Bank:</strong> There may be a processing delay on the bank's end. Contact your bank or card issuer to inquire about pending refunds</li>
+                <li><strong>Contact Payment Gateway:</strong> If you paid via Razorpay, UPI, or other gateways, check with the respective payment service provider</li>
+                <li><strong>Contact ZARO Bakerhouse:</strong> If the refund still does not appear after completing the above steps, please reach out to us with your refund reference number</li>
+            </ul>
+
+            <h3>Refund Delays</h3>
+            <p>Refunds may be delayed due to:</p>
+            <ul>
+                <li>Bank processing times and internal verification procedures</li>
+                <li>Delays by payment gateway providers or intermediary financial institutions</li>
+                <li>Weekends, public holidays, or non-business days</li>
+            </ul>
+            <p>ZARO Bakerhouse is not responsible for delays caused by third-party payment processors or banking institutions. However, we will make every effort to assist you in tracking your refund.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>6. Partial Refunds</h2>
+            <p>In certain situations, partial refunds may be issued instead of full refunds:</p>
+            <ul>
+                <li>If only a portion of your order is affected by quality or delivery issues</li>
+                <li>If some items in a combo or hamper are acceptable while others are not</li>
+                <li>If a minor defect is identified that does not significantly affect the product's usability or quality</li>
+            </ul>
+            <p>The amount of the partial refund will be determined by ZARO Bakerhouse based on the nature and extent of the issue.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>7. Replacement Policy</h2>
+            <p>In cases where a refund is not feasible or preferred, ZARO Bakerhouse may offer a replacement instead:</p>
+            <ul>
+                <li>Replacement products will be of equal or greater value</li>
+                <li>Replacement orders will be processed and delivered at the earliest convenience</li>
+                <li>No additional charges will be levied for replacement deliveries due to errors on our part</li>
+            </ul>
+            <p>Replacement is subject to product availability and approval by ZARO Bakerhouse management.</p>
+        </div>
+
+        <div class="contact-box">
+            <h2>8. Contact Information</h2>
+            <p>For any questions, concerns, or requests related to refunds, cancellations, or order issues, please contact us:</p>
+            <p><strong>Business Name:</strong> ZARO Bakerhouse</p>
+            <p><strong>Address:</strong> Shop No 10, Shiv Darshan, Plot No 407 15, 33rd Rd, near Noble Medical, Bandra West, Mumbai, Maharashtra 400050</p>
+            <p><strong>Email:</strong> hello@zarobakery.com</p>
+            <p><strong>Phone:</strong> +91 877 964 9761</p>
+            <p style="margin-top: 1.5rem;"><strong>Customer Support Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM</p>
+            <p style="margin-top: 1rem;">Our customer support team will respond to your inquiries within 24 to 48 hours. We are committed to resolving all refund and cancellation matters promptly and fairly.</p>
+        </div>
+
+        <div class="policy-section">
+            <div class="highlight-box">
+                <p><strong>Disclaimer:</strong> ZARO Bakerhouse reserves the right to modify this Refund and Cancellation Policy at any time. Any changes will be updated on this page with a revised "Last Updated" date. Continued use of our services after any modifications constitutes acceptance of the updated policy.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 ZARO Bakerhouse. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
